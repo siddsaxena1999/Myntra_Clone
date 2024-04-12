@@ -132,3 +132,38 @@ header {
 .sale-item {
     width: 220px;
 }
+
+/* footer */
+
+.footer_container {
+    padding: 30px 0 40px 0;
+    background: #fafbfc;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_column a {
+    font-size: 15px;
+    color: rgb(105, 107, 121);
+    display: block;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.footer_column h3 {
+    color: rgb(40, 44, 63);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.copyright {
+    color: #94969f;
+    text-align: end;
+    padding: 15px;
+}
