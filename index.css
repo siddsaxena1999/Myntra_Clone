@@ -10,7 +10,6 @@ html,body {
     width: 100%;
 }
 
-
 /* header and navbar */
 
 header {
@@ -20,19 +19,20 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
+    padding: 0 2%;
 }
 
 .myntra_logo {
     height: 45px;
 }
 
-.logo_container {
+/* .logo_container {
     margin-left: 4%;
 }
 
 .action_bar {
     margin-right: 4%;
-}
+} */
 
 .navbar {
     min-width: 500px;
@@ -59,6 +59,57 @@ header {
     color: rgb(255, 63, 108);
     font-size: 10px;
     font-weight: 600;
+}
+
+.burger {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    background: #fff;
+    height: 90%;
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.burger a {
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 3px solid #fff;
+}
+
+.burger a sup {
+    color: rgb(255, 63, 108);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.burger a:hover {
+    border-bottom: 3px solid #ee5f73;
+}
+
+.burger button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.hamburger-icon button {
+    display: none;
+    padding: 6px 8px;
+    background: transparent;
+    border: none;
 }
 
 .search_bar {
@@ -106,6 +157,7 @@ header {
 
 /* banner main */
 
+
 .banner_img {
     width: 100%;
 }
@@ -124,8 +176,9 @@ header {
     font-weight: 700;
 }
 
-.category_item {
+.category_items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -157,13 +210,107 @@ header {
 
 .footer_column h3 {
     color: rgb(40, 44, 63);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .copyright {
     color: #94969f;
     text-align: end;
     padding: 15px;
+}
+
+.footer-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-btns button {
+    height: 100%;
+    width: 160px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: none;
+    background: #000;
+    color: white;
+    font-size: 16px;
+    display: flex;
+}
+
+.footer-btns button .btn-icon{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-btns .btn-text {
+    height: 100%;
+    width: 80%;
+}
+
+
+.footer-btns button i {
+    font-size: 25px;
+}
+
+
+.footer-btns span {
+    font-size: 10px;
+}
+
+@media(max-width: 495px) {
+    .sale-item {
+        width: 150px;
+    }
+    .myntra_logo {
+        height: 35px;
+    }
+    .action_icon {
+        font-size: 16px;
+    }
+
+    .action_name {
+        font-size: 16px;
+    }
+
+    .footer-btns {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .copyright {
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search_bar {
+        display: none;
+    }
+}
+
+@media (max-width: 675px) {
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1075px) {
+    .hamburger-icon button{
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
 }
